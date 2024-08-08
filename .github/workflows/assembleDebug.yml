@@ -25,8 +25,9 @@ jobs:
 
     - name: Run Gradle
       uses: gradle/actions/setup-gradle@v4
-      with:
-        arguments: assembleDebug
+
+    - name: Assemble Debug
+      run: ./gradlew assembleDebug
 
     - name: Upload Assembly
       uses: actions/upload-artifact@v4

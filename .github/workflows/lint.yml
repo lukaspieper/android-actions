@@ -20,8 +20,9 @@ jobs:
 
     - name: Run Gradle
       uses: gradle/actions/setup-gradle@v4
-      with:
-        arguments: lint
+
+    - name: Run Lint
+      run: ./gradlew lint
 
     - name: Upload Markdown Report
       run: |
